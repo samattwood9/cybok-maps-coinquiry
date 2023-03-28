@@ -1,15 +1,9 @@
 import streamlit as st
 
-st.title("Streamlit Starter")
+st.set_page_config(layout="wide")
+
+st.title("Mapping cyber-enabled roles to CyBOK")
 
 st.write(
-    "This repository was generated from the streamlit-starter template: https://github.com/samattwood9/streamlit-starter."
-)
-
-st.write(
-    "To make this streamlit app your own, check out the streamlit documentation: https://docs.streamlit.io/."
-)
-
-st.write(
-    "To deploy, check out streamlit cloud: https://docs.streamlit.io/streamlit-cloud."
+    "This app shows cyber-enabled roles mapped to knowledge areas in the Cyber Security Body of Knowledge. The mappings were created through cooperative inquiry with cyber-enabled practitioners."
 )
