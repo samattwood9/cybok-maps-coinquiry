@@ -1,6 +1,6 @@
 # Streamlit starter
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://samattwood9-streamlit-starter-appapp-3hz6un.streamlit.app) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://samattwood9-streamlit-starter-appapp-3hz6un.streamlit.app)
 
 A lightweight template to help teams get started and collaborate with Streamlit in VS Code.
 
