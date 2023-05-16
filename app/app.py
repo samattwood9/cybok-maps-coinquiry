@@ -7,6 +7,10 @@ import numpy as np
 # config + layout
 st.set_page_config(page_title="Mapping cyber-enabled roles to CyBOK", page_icon="🗺️", layout="wide")
 
+st.sidebar.write('This dashboard presents cyber-enabled roles mapped to the CyBOK through co-operative inquiry. You can read more about how the mappings were created here: .')
+st.sidebar.write('This work was supported by the Cyber Security Body of Knowledge (CyBOK) call for funded Outreach, Adoption, and Awareness projects around CyBOK v1.1.')
+st.sidebar.write('CyBOK © Crown Copyright, The National Cyber Security Centre 2023, licensed under the Open Government Licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/')
+
 st.title("Mapping cyber-enabled roles to CyBOK")
 
 st.write(
@@ -57,15 +61,15 @@ col1.plotly_chart(fig)
 # display mapping - recommended KAs
 col3.write('Based on the selected titles, we think these knowledge areas are the most relevant:')
 
-col3.write(':one: Example area')
+col3.write(':one: Secure Software Development Lifecycle')
 
-col3.write(':two: Example area')
+col3.write(':two: Web & Mobile Application Security')
 
-col3.write(':three: Example area')
+col3.write(':three: Human Factors')
 
-col3.write(':four: Example area')
+col3.write(':four: Authentication, Authorisation, & Accountability')
 
-col3.write(':five: Example area')
+col3.write(':five: Applied Cryptography')
 
 col3.write('To learn more and access resources related to these knowledge areas, visit the CyBOK v1.1: https://www.cybok.org/knowledgebase1_1/.')
 
