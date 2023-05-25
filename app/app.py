@@ -35,19 +35,22 @@ for _, row in mappings_df.iterrows():
 # user selection
 selected_titles = st.multiselect("Select generic job titles to view mappings:", title2mapping.keys())
 
-# make plot
-mapping_data = []
-for selected_title in selected_titles:
-    mapping_data.append(go.Scatterpolar(r=title2mapping[selected_title], theta=categories, name=selected_title, line_width=5, marker_size=12))
+if selected_titles != 0:
+    # make plot
+    mapping_data = []
+    for selected_title in selected_titles:
+        mapping_data.append(go.Scatterpolar(r=title2mapping[selected_title], theta=categories, name=selected_title, line_width=5, marker_size=12))
 
-fig = go.Figure(
-    data=mapping_data,
-    layout=go.Layout(
-        title=go.layout.Title(text='Mapping to knowledge groups'),
-        polar={'radialaxis': {'visible': True}},
-        showlegend=True
+    fig = go.Figure(
+        data=mapping_data,
+        layout=go.Layout(
+            title=go.layout.Title(text='Mapping to knowledge groups'),
+            polar={'radialaxis': {'visible': True}},
+            showlegend=True
+        )
     )
-)
 
-st.plotly_chart(fig)
+    st.plotly_chart(fig)
+else:
+    st.info('Select one title or more to view mappings.')
 
