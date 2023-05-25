@@ -1,8 +1,6 @@
 import streamlit as st
 import plotly.graph_objects as go
-import plotly.offline as pyo
 import pandas as pd
-import numpy as np
 
 # config + layout
 st.set_page_config(page_title="Mapping cyber-enabled roles to CyBOK", page_icon="🗺️")
