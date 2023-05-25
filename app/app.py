@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 # config + layout
-st.set_page_config(page_title="Mapping cyber-enabled roles to CyBOK", page_icon="🗺️", layout="wide")
+st.set_page_config(page_title="Mapping cyber-enabled roles to CyBOK", page_icon="🗺️")
 
 st.sidebar.write('This dashboard presents cyber-enabled roles mapped to the CyBOK through co-operative inquiry. You can read more about how the mappings were created here: .')
 st.sidebar.write('This work was supported by the Cyber Security Body of Knowledge (CyBOK) call for funded Outreach, Adoption, and Awareness projects around CyBOK v1.1.')
@@ -18,13 +18,13 @@ st.write(
 )
 
 # load data
-grp_maps_df = pd.read_csv('./data/group_mappings.csv', index_col=False)
+mappings_df = pd.read_csv('./data/mappings.csv', index_col=False)
 
-categories = grp_maps_df.columns.values.tolist()[1:]
+categories = mappings_df.columns.values.tolist()[1:]
 categories.append(categories[0])
 
 title2mapping = {}
-for _, row in grp_maps_df.iterrows():
+for _, row in mappings_df.iterrows():
     title2mapping[row['Title']] = [
         row['Human Organisational & Regulatory Aspects'],
         row['Attacks & Defences'],
@@ -37,9 +37,7 @@ for _, row in grp_maps_df.iterrows():
 # user selection
 selected_titles = st.multiselect("Select generic job titles to view mappings:", title2mapping.keys())
 
-# display mapping - spider/groups
-col1, col2, col3 = st.columns([6, 1, 6])
-
+# make plot
 mapping_data = []
 for selected_title in selected_titles:
     mapping_data.append(go.Scatterpolar(r=title2mapping[selected_title], theta=categories, name=selected_title, line_width=5, marker_size=12))
@@ -53,20 +51,5 @@ fig = go.Figure(
     )
 )
 
-col1.plotly_chart(fig)
-
-# display mapping - recommended KAs
-col3.write('Based on the selected titles, we think these knowledge areas are the most relevant:')
-
-col3.write(':one: Secure Software Development Lifecycle')
-
-col3.write(':two: Web & Mobile Application Security')
-
-col3.write(':three: Human Factors')
-
-col3.write(':four: Authentication, Authorisation, & Accountability')
-
-col3.write(':five: Applied Cryptography')
-
-col3.write('To learn more and access resources related to these knowledge areas, visit the CyBOK v1.1: https://www.cybok.org/knowledgebase1_1/.')
+st.plotly_chart(fig)
 
