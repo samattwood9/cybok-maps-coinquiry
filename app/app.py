@@ -7,8 +7,8 @@ import numpy as np
 # config + layout
 st.set_page_config(page_title="Mapping cyber-enabled roles to CyBOK", page_icon="🗺️")
 
-st.sidebar.write('This dashboard presents cyber-enabled roles mapped to the CyBOK through co-operative inquiry. You can read more about how the mappings were created here: .')
-st.sidebar.write('This work was supported by the Cyber Security Body of Knowledge (CyBOK) call for funded Outreach, Adoption, and Awareness projects around CyBOK v1.1.')
+st.sidebar.write('This dashboard presents cyber-enabled roles mapped to the CyBOK through co-operative inquiry. You can read more about how the mappings were created here: https://www.cybok.org/news/outreach-projects.')
+st.sidebar.write('This work was supported by the Cyber Security Body of Knowledge (CyBOK) call for funded Outreach, Adoption, and Awareness projects around CyBOK v1.1. The CyBOK v1.1 is accessible here: https://www.cybok.org/knowledgebase1_1/')
 st.sidebar.write('CyBOK © Crown Copyright, The National Cyber Security Centre 2023, licensed under the Open Government Licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/')
 
 st.title("Mapping cyber-enabled roles to CyBOK")
