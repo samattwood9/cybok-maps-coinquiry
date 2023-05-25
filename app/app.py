@@ -18,13 +18,13 @@ st.write(
 )
 
 # load data
-mappings_df = pd.read_csv('./data/mappings.csv', index_col=False)
+grp_maps_df = pd.read_csv('./data/group_mappings.csv', index_col=False)
 
-categories = mappings_df.columns.values.tolist()[1:]
+categories = grp_maps_df.columns.values.tolist()[1:]
 categories.append(categories[0])
 
 title2mapping = {}
-for _, row in mappings_df.iterrows():
+for _, row in grp_maps_df.iterrows():
     title2mapping[row['Title']] = [
         row['Human Organisational & Regulatory Aspects'],
         row['Attacks & Defences'],
