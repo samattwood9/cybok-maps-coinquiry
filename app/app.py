@@ -14,7 +14,7 @@ st.sidebar.write('CyBOK © Crown Copyright, The National Cyber Security Centre 2
 st.title("Mapping cyber-enabled roles to CyBOK")
 
 st.write(
-    "This app shows cyber-enabled roles mapped to knowledge areas in the Cyber Security Body of Knowledge. The mappings were created through cooperative inquiry with 19 cyber-enabled practitioners."
+    "This app shows cyber-enabled roles mapped to knowledge areas in the Cyber Security Body of Knowledge. The mappings were created through co-operative inquiry with 19 cyber-enabled practitioners."
 )
 
 # load data
@@ -39,9 +39,6 @@ selected_titles = st.multiselect("Select generic job titles to view mappings:", 
 
 # display mapping - spider/groups
 col1, col2, col3 = st.columns([6, 1, 6])
-
-#vals = [1, 2, 3, 3, 2, 1]
-#categories = ['Human Organisational & Regulatory Aspects', 'Attacks & Defences', 'Systems Security', 'Software & Platform Security', 'Infrastructure Security', 'Human Organisational & Regulatory Aspects']
 
 mapping_data = []
 for selected_title in selected_titles:
