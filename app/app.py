@@ -12,7 +12,7 @@ st.sidebar.write('CyBOK © Crown Copyright, The National Cyber Security Centre 2
 st.title("Mapping cyber-enabled roles to CyBOK")
 
 st.write(
-    "This app shows cyber-enabled roles mapped to knowledge areas in the Cyber Security Body of Knowledge. The mappings were created through co-operative inquiry with 19 cyber-enabled practitioners."
+    "This app shows cyber-enabled roles mapped to knowledge areas in the Cyber Security Body of Knowledge. The mappings were created through co-operative inquiry with 19 cyber-enabled practitioners. Select a descriptive title that aligns to your job role below to highlight the CyBOK knowledge most relevant to you. More titles will be added in the future."
 )
 
 # load data
