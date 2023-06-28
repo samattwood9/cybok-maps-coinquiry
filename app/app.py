@@ -33,7 +33,7 @@ for _, row in mappings_df.iterrows():
     ]
 
 # user selection
-selected_titles = st.multiselect("Select generic job titles to view mappings:", title2mapping.keys())
+selected_titles = st.multiselect("Select generic job titles to view mappings:", title2mapping.keys(), help="Note: We do not advise comparing the mapped job titles to mapped degree programmes at this time.")
 
 if len(selected_titles) != 0:
     # make plot
